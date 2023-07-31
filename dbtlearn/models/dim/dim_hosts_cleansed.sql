@@ -1,11 +1,11 @@
 {{
   config(
-    materialized = 'table',
+    materialized = 'view',
     )
 }}
 
 WITH src_hosts AS (
-    SELECT * FROM {{ ref('src_host') }}
+    SELECT * FROM {{ ref('src_hosts') }}
 )
 
 SELECT 
@@ -18,4 +18,4 @@ SELECT
     created_at,
     updated_at
 FROM   
-    src_host
+    src_hosts

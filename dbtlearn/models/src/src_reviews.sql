@@ -1,3 +1,9 @@
+{{
+  config(
+    materialized = 'ephemeral',
+    )
+}}
+
 WITH raw_reviews AS (
     SELECT * FROM AIRBNB.RAW.raw_reviews
 )

@@ -1,3 +1,9 @@
+{{
+  config(
+    materialized = 'ephemeral',
+    )
+}}
+
 with raw_hosts AS (
     SELECT * FROM AIRBNB.RAW.RAW_HOSTS
 )
